@@ -16,7 +16,8 @@
      inspection, 5 is used for the PMN data. There is likley some better way to do this.
     -Weird center pattern seems to be unique to the material and changes slightly based on 
      experiment conditions. Also doesn't seem to have significant features that are created by
-     edge effects (see relevant jupyter notebook)
+     edge effects (see relevant jupyter notebook). Center features also appear to remain the same
+     for a given data set regardless of how peaks are modified.
 
 ## Punch and fill:
     -Quick (and probably incorrect) implementation of a punch and fill algorithm where bragg
