@@ -29,3 +29,13 @@
 ## Filter comparisons:
     -Has a bunch of filters that were tested for preprocessing the data, basically all of these
      are useless. Only included in case something is later found to be useful
+     
+## Stupid filter:
+    -Started developing a filter that locates the bragg peaks and only runs over them, currently
+     useless and a somewhat incomprehensible mess.
+    -May be useful and worth continuing in the future if data sets are found with a significant
+     amount of noise; regions without peaks can be filtered with a regular hampel filter and
+     bragg peaks can be removed with the modified hampel filter
+    -Bragg peaks are identified by projecting the volume along each axis, locating peak regions 
+     in 2D, and back projecting the regions over the volume. Peaks are located in regions where
+     back projections intersect
