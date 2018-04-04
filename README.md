@@ -19,6 +19,11 @@
      edge effects (see relevant jupyter notebook). Center features also appear to remain the same
      for a given data set regardless of how peaks are modified.
 
+## Peak removal filter:
+    -Filter which removes bragg peaks and reconstructs the diffuse by replacing missing values
+    -Detection of peaks is same as with modified hampel filter
+    -Points that are removed are replaced with a value of median+2.2*MAD
+
 ## Punch and fill:
     -Quick (and probably incorrect) implementation of a punch and fill algorithm where bragg
      peaks are punched out and the volume is convolved with a gaussian
