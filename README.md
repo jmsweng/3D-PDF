@@ -27,7 +27,9 @@
 ## Punch and fill:
     -Quick (and probably incorrect) implementation of a punch and fill algorithm where bragg
      peaks are punched out and the volume is convolved with a gaussian
-     
+
+# Everything below this is disorganized garbage and can probably be mostly ignored
+
 ## Edge effect test:
     -Shows the FT of whatever 3D shape is created by the detector coverage to see edge effects
      created in the center of the FT volume
