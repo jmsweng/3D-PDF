@@ -1,15 +1,6 @@
 # 3D-PDF
 
-## Modified hampel filter:
-    -Shows current best filter used for preprocessing data before calculating PDF
-    -Detects bragg peaks by checking the center value a cube shaped moving window if it is
-     an outlier or not
-    -Outliers are determined to be 3σ away from the median value in the window, σ is estimated
-     as 1.4826*MAD (median absolute deviation)
-    -Points determined to be outliers are set to 3.5σ from the median
-    -All other values are unmodified
-
-###  Notes:
+##  Notes not specific to any particular filter:
     -Simply removing the bragg peaks by replacing them with the median seems to create strange 
      negative correlations where positive correlations are expected
     -Moving window size was selected by using width of the diffuse features determined by visual
@@ -18,6 +9,15 @@
      experiment conditions. Also doesn't seem to have significant features that are created by
      edge effects (see relevant jupyter notebook). Center features also appear to remain the same
      for a given data set regardless of how peaks are modified.
+
+## Modified hampel filter:
+    -Shows current best filter used for preprocessing data before calculating PDF
+    -Detects bragg peaks by checking the center value a cube shaped moving window if it is
+     an outlier or not
+    -Outliers are determined to be 3σ away from the median value in the window, σ is estimated
+     as 1.4826*MAD (median absolute deviation)
+    -Points determined to be outliers are set to 3.5σ from the median
+    -All other values are unmodified
 
 ## Peak removal filter:
     -Filter which removes bragg peaks and reconstructs the diffuse by replacing missing values
