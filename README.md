@@ -11,7 +11,8 @@
      for a given data set regardless of how peaks are modified.
 
 ## Modified hampel filter:
-    -Shows current best filter used for preprocessing data before calculating PDF
+    -Shows current "best" filter used for preprocessing data before calculating PDF (might 
+     be adding in data that wasn't there by the way the peaks are reconstructed)
     -Detects bragg peaks by checking the center value a cube shaped moving window if it is
      an outlier or not
     -Outliers are determined to be 3σ away from the median value in the window, σ is estimated
