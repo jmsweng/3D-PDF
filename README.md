@@ -22,7 +22,20 @@
 ## Peak removal filter:
     -Filter which removes bragg peaks and reconstructs the diffuse by replacing missing values
     -Detection of peaks is same as with modified hampel filter
-    -Points that are removed are replaced with a value of median+2.2*MAD
+    -Points that are removed are replaced with a value of median+2.2*MAD to reconstruct the
+     diffuse peak
+    -MAD estimator has a 37% efficiency for gaussian distributed values
+
+## Peak removal filter with S_n estimator
+    -Same as peak removal filter except points are replaced with median+1.7697*S_n to 
+     reconstruct the diffuse peak
+    -Sn estimator doesn't assume a symmetrical distribution like MAD and has an efficiency of 
+     58% for gaussian distributed values
+    -Estimator is described in doi:10.2307/2291267
+    -Parallelization is broken so it takes forever
+    -Percent difference between pattersons calculated with MAD and S_n estimator peak at around
+     0.25%, so MAD can probably be safely used to estimate scale for diffuse scattering unless
+     data is significantly noisier than the test data set used
 
 ## Punch and fill:
     -Quick (and probably incorrect) implementation of a punch and fill algorithm where bragg
